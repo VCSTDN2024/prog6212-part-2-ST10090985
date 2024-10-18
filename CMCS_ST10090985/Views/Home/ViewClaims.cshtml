@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Admin View Claims Page";
+}
+
+@model List<CMCS_ST10090985.Models.Claim>
+
+<!DOCTYPE html>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Claim ID</th>
+            <th>Hours Worked</th>
+            <th>Hourly Rate</th>
+            <th>Additional Notes</th>
+            <th>Document</th>
+            <th>Status</th> <!-- Add Status column -->
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var claim in Model)
+        {
+            <tr>
+                <td>@claim.Id</td>
+                <td>@claim.WorkedHours</td>
+                <td>@claim.HourlyRate</td>
+                <td>@claim.AdditionalNotes</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(claim.UploadedFileName))
+                    {
+                        <a href="@Url.Content("~/UploadedFiles/" + claim.UploadedFileName)" target="_blank">@claim.UploadedFileName</a>
+                    }
+                    else
+                    {
+                        <span>No document</span>
+                    }
+                </td>
+                <td>@claim.Status</td> <!-- Display the status here -->
+                <td>
+                    <form method="post" asp-action="RejectClaim" class="d-inline">
+                        <input type="hidden" name="claimID" value="@claim.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm">Reject</button>
+                    </form>
+                    <form method="post" asp-action="ApproveClaim" class="d-inline">
+                        <input type="hidden" name="claimID" value="@claim.Id" />
+                        <button type="submit" class="btn btn-primary btn-sm">Approve</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    

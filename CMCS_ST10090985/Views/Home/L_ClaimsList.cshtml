@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "View Claims Page";
+}
+
+@model List<CMCS_ST10090985.Models.Claim>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Claims List</h1>
+
+        <!-- Button for creating a new claim -->
+        <a class="btn btn-primary mb-3" asp-controller="Home" asp-action="AddClaim">Create a Claim</a>
+
+        <!-- If there are claims to display -->
+        @if (Model != null && Model.Any())
+        {
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Claim ID</th>
+                        <th>Hours Worked</th>
+                        <th>Hourly Rate</th>
+                        <th>Additional Notes</th>
+                        <th>Status</th>
+                        <th>Document</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var claim in Model)
+                    {
+                        <tr>
+                            <td>@claim.Id</td>
+                            <td>@claim.WorkedHours</td>
+                            <td>@claim.HourlyRate</td>
+                            <td>@claim.AdditionalNotes</td>
+                            <td>@claim.Status</td> <!-- Add this line to display the status -->
+                            <td>
+                                @if (!string.IsNullOrEmpty(claim.UploadedFileName))
+                                {
+                                    <a href="@Url.Content("~/UploadedFiles/" + claim.UploadedFileName)" target="_blank">
+                                        @claim.UploadedFileName
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span>No document</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No claims available.</p>
+        }
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
