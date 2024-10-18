@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\School\\Github_Repositories\\prog6212-part-2-ST10090985\\CMCS_ST10090985\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{635C9F85-23A4-4C1C-81EA-C50F27274ADE}|..\\CMCS_ST10090985.Tests\\CMCS_ST10090985.Tests.csproj|c:\\school\\github_repositories\\prog6212-part-2-st10090985\\cmcs_st10090985.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{14593C38-A445-4BB3-92F5-2003878EBD2C}|CMCS_ST10090985.csproj|c:\\school\\github_repositories\\prog6212-part-2-st10090985\\cmcs_st10090985\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14593C38-A445-4BB3-92F5-2003878EBD2C}|CMCS_ST10090985.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{635C9F85-23A4-4C1C-81EA-C50F27274ADE}|..\\CMCS_ST10090985.Tests\\CMCS_ST10090985.Tests.csproj|c:\\school\\github_repositories\\prog6212-part-2-st10090985\\cmcs_st10090985.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14593C38-A445-4BB3-92F5-2003878EBD2C}|CMCS_ST10090985.csproj|c:\\school\\github_repositories\\prog6212-part-2-st10090985\\cmcs_st10090985\\views\\home\\addclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -57,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,7 +65,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\School\\Github_Repositories\\prog6212-part-2-ST10090985\\CMCS_ST10090985.Tests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "..\\CMCS_ST10090985.Tests\\UnitTest1.cs",
@@ -150,15 +150,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\School\\Github_Repositories\\prog6212-part-2-ST10090985\\CMCS_ST10090985\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\School\\Github_Repositories\\prog6212-part-2-ST10090985\\CMCS_ST10090985\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAywKIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAADwv7AAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T15:17:36.847Z"
+              "WhenOpened": "2024-09-09T15:17:36.847Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
